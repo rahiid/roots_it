@@ -1,0 +1,110 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+
+.testimonial-section{
+    width: 100%;
+    @include primary-gradient;
+    padding: 40px 0px;
+    color: #fff;
+    .testimonial-description{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        h4{
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #FFB116;
+        }
+        h2{
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 0.05rem;
+        }
+        p{
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 40px;
+        }
+    }
+
+    .testimonial-template{
+        width: 100%;
+        p{
+            margin-top: 30px;
+            text-align: justify;
+            margin-bottom: 40px; 
+        }
+    }
+    .testimonial-img{
+        @include media-breakpoint-down(md){
+            display: none;
+        }
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 50%;
+        
+        img{
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+
+    .testimonial-cards{
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+        .testimonial-details{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+           
+           
+            .card{
+                width: 100%;
+                background-color: rgba(255, 255, 255, .2);
+                border: none;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                border-radius: 40px;
+                transition: transform .35s;
+                
+                img{
+                    padding: 15px;
+                    width: 100px;
+                    height: 100px;                   
+                }
+                .card-body{
+                    text-align: right;
+                    margin-top: 15px;
+                    padding-right: 25px;
+                }
+                &:hover{
+                    transform: scale(1.04);
+                }
+            }
+        }
+        
+    }
+    
+
+}
+
+.add-cards-animaion{
+    animation: lightSpeedInLeft;
+    animation-duration: 2s;
+}

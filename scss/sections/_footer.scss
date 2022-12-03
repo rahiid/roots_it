@@ -1,0 +1,59 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+@use '../components/buttons' as *;
+
+.footer-section{
+    width: 100%;
+    @include primary-gradient;
+    color: #ffffff;
+    padding: 25px 0;
+    .footer-description{
+        width: 100%;
+        margin-bottom: 40px;
+        .form-group{
+            width: 20rem;
+            display: flex;
+            justify-content: start;
+            flex-direction: row;
+            .btn{
+                margin-left: 0.5rem;
+                color: #ffffff;
+                background: #FFB116;
+                border: 1px solid #FFB116;
+                &:hover{
+                    background: #ffffff;
+                    border: 1px solid #FFB116;
+                    color: #FFB116;
+                }
+            }
+        }
+    }
+    .footer-credit{
+        p{
+            margin-top: 20px;
+            font-size: 0.8rem;
+        }
+    }
+    .icons{
+        margin-top: 10px;
+        width: 100%;
+        text-align: right;
+        @include media-breakpoint-down(md){
+            text-align: center;
+        }
+        a{
+            text-decoration: none;
+            color: #ffffff;
+            padding: 4px 10px;
+            margin-left: 10px;  
+            border: 1px solid #ffffff;
+            display: inline-block;
+            border-radius: 5px;
+            
+            &:hover{
+                background-color: #ffffff;
+                color: $primary;
+            }
+        }
+    }
+}

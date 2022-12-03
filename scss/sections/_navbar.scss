@@ -1,0 +1,57 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
+.navbar-section{
+    width: 100%;
+    
+    .navbar-brand{
+        img{
+            width: 8rem;
+            height: 100%;
+        }
+    }
+    .navbar {
+        li{
+        color: #fff;
+        }
+    }
+    .menu{
+        width: 100%;
+        padding: 0.6rem 0;
+       @include primary-gradient;
+       -moz-box-shadow:0 5px 5px rgba(0, 0, 0, 0.25);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+        color: white;
+     
+        li{
+            padding-left: 0.7rem;
+            
+            a{
+                letter-spacing: 0.08rem;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .bg-change {
+        background-color: white;
+        width: 100%;
+        padding: 0.6rem 0;
+        -moz-box-shadow:0 5px 5px rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+        color: white;
+       
+        li{
+            padding-left: 0.7rem;
+            
+            a{
+                letter-spacing: 0.08rem;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+       }
+   
+}

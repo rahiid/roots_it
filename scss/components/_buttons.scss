@@ -1,0 +1,38 @@
+@use '../custom' as *;
+
+.rounded-button {
+    z-index: 1;
+    position: relative;
+    outline: none;
+    font-weight: 500;
+    margin: 0;
+    border: 0.1rem solid rgba($primary-dark, 0.6);
+    background-color: white ;
+    color: $secondary;
+    padding: 10px 20px;
+    
+    &::before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $primary-light;
+        transform-origin: center right;
+        transform: scaleX(0);
+        transition: transform 0.25s ease-in-out;
+        
+      }
+    &:hover {
+        cursor: pointer;
+        color: white;
+       
+    }
+    &:hover::before {
+        transform-origin: center left;
+        transform: scaleX(1);
+      }
+}
+
